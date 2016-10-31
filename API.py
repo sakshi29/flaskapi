@@ -50,16 +50,16 @@ def crossdomain(origin=None, methods=None, headers=None,
     return decorator
 
 
-@app.route('/account/login', methods=['GET',])
+@app.route('/', methods=['GET',])
 @crossdomain(origin = '*')
-def set_tasks():
+def Index():
 	resp = jsonify("success")
 	return resp
 
 
 @app.route('/account/login', methods=['POST',])
 @crossdomain(origin = '*')
-def set_tasks():
+def Login():
 	parser = reqparse.RequestParser()
 	parser.add_argument('username', type=str)
 	parser.add_argument('password', type=str)
