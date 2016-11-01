@@ -53,7 +53,7 @@ def crossdomain(origin=None, methods=None, headers=None,
 @app.route('/', methods=['GET',])
 @crossdomain(origin = '*')
 def Index():
-	resp = jsonify("success")
+	resp = jsonify({"status" : "success"})
 	return resp
 
 
